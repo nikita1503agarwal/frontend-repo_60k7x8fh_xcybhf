@@ -1,32 +1,53 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 
 const features = [
   {
-    title: 'Kiosks that feel effortless',
-    copy: 'Beautiful, accessible and secure experiences for check-in, ticketing, wayfinding and more.',
-    cta: 'Learn more',
+    title: 'Touch-first kiosks for modern lobbies',
+    copy: 'Effortless check-in, wayfinding and ticketing. Optimized for glanceable reading and quick interactions.',
+    cta: 'See kiosk patterns',
   },
   {
-    title: 'Digital signage that adapts',
-    copy: 'Manage dynamic content at scale with real-time data and stunning layouts.',
-    cta: 'See signage',
+    title: 'Drive merchandising with dynamic signage',
+    copy: 'Schedule, target and automate content with robust templates and data integrations.',
+    cta: 'Explore signage',
   },
   {
-    title: 'Mobile that connects everything',
-    copy: 'Bring the journey to the guest’s pocket with loyalty, offers and messaging.',
-    cta: 'Explore mobile',
+    title: 'Unify mobile and web to extend the journey',
+    copy: 'From loyalty to messaging—connect every interaction into one continuous experience.',
+    cta: 'View mobile flows',
   },
 ]
 
 const FeatureRows = () => {
   return (
     <section className="bg-white" id="solutions">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 space-y-24">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-28 space-y-28">
         {features.map((f, idx) => (
-          <div key={idx} className={`grid grid-cols-1 lg:grid-cols-2 gap-10 items-center`}>
+          <motion.div
+            key={idx}
+            initial={{ opacity: 0, y: 22 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-100px' }}
+            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+            className={`grid grid-cols-1 lg:grid-cols-2 gap-10 items-center`}
+          >
             <div className={`${idx % 2 === 1 ? 'lg:order-2' : ''}`}>
-              <div className="aspect-[16/10] w-full rounded-2xl bg-neutral-100 border border-black/5 overflow-hidden">
-                <div className="h-full w-full flex items-center justify-center text-neutral-400">Image / Video Placeholder</div>
+              <div className="group aspect-[16/10] w-full rounded-2xl bg-neutral-100 border border-black/5 overflow-hidden relative">
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-[radial-gradient(circle_at_30%_20%,rgba(18,136,255,0.12),transparent_35%),radial-gradient(circle_at_70%_80%,rgba(0,0,0,0.06),transparent_40%)]" />
+                <div className="h-full w-full flex items-center justify-center text-neutral-400">Digital kiosk visual</div>
+                <motion.div
+                  initial={{ opacity: 0, y: 16 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5 }}
+                  className="absolute bottom-5 left-5 right-5 rounded-xl border border-black/5 bg-white/70 backdrop-blur-lg p-4 shadow-lg"
+                >
+                  <div className="flex items-center justify-between">
+                    <div className="text-sm text-neutral-700">Queue status</div>
+                    <div className="h-8 w-24 rounded-full bg-[#1288FF]" />
+                  </div>
+                </motion.div>
               </div>
             </div>
             <div className={`${idx % 2 === 1 ? 'lg:order-1' : ''}`}>
@@ -39,7 +60,7 @@ const FeatureRows = () => {
                 </a>
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>

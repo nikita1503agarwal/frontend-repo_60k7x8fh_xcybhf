@@ -4,10 +4,10 @@ const Navbar = () => {
   const [open, setOpen] = useState(false)
 
   const navItems = [
-    { href: '#solutions', label: 'Solutions' },
-    { href: '#products', label: 'Products' },
     { href: '#industries', label: 'Industries' },
+    { href: '#products', label: 'Products' },
     { href: '#resources', label: 'Resources' },
+    { href: '#about', label: 'About' },
   ]
 
   return (
@@ -25,7 +25,7 @@ const Navbar = () => {
         </nav>
 
         <div className="hidden md:flex items-center gap-3">
-          <a href="#contact" className="px-4 py-2 rounded-full bg-[#1288FF] text-white hover:bg-[#0f79e5] transition-colors">Contact</a>
+          <a href="#contact" className="px-4 py-2 rounded-full bg-[#1288FF] text-white hover:bg-[#0f79e5] transition-colors">Request Demo</a>
         </div>
 
         <button
@@ -57,7 +57,7 @@ const Navbar = () => {
               </a>
             ))}
             <div className="pt-2">
-              <a href="#contact" onClick={() => setOpen(false)} className="block text-center px-4 py-3 rounded-full bg-[#1288FF] text-white hover:bg-[#0f79e5] transition-colors">Contact</a>
+              <a href="#contact" onClick={() => setOpen(false)} className="block text-center px-4 py-3 rounded-full bg-[#1288FF] text-white hover:bg-[#0f79e5] transition-colors">Request Demo</a>
             </div>
           </div>
         </div>

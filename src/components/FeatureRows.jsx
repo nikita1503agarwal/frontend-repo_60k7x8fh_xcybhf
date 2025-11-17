@@ -33,7 +33,10 @@ const FeatureRows = () => {
               <h2 className="text-4xl sm:text-5xl font-semibold tracking-tight text-neutral-900">{f.title}</h2>
               <p className="mt-5 text-lg text-neutral-700 max-w-prose">{f.copy}</p>
               <div className="mt-8">
-                <a href="#" className="text-neutral-900 underline underline-offset-4 hover:no-underline">{f.cta}</a>
+                <a href="#" className="inline-flex items-center gap-2 text-[#1288FF] hover:opacity-80">
+                  {f.cta}
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" className="h-5 w-5"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"/></svg>
+                </a>
               </div>
             </div>
           </div>

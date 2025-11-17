@@ -17,7 +17,7 @@ const Hero = () => {
             Build modern visitor journeys with kiosks, mobile, web and signage in one connected platform.
           </p>
           <div className="mt-8 flex items-center gap-4">
-            <a href="#solutions" className="px-6 py-3 rounded-full bg-neutral-900 text-white hover:bg-neutral-800 transition-colors">Explore Solutions</a>
+            <a href="#solutions" className="px-6 py-3 rounded-full bg-[#1288FF] text-white hover:bg-[#0f79e5] transition-colors">Explore Solutions</a>
             <a href="#contact" className="px-6 py-3 rounded-full border border-neutral-300 text-neutral-900 hover:bg-neutral-50 transition-colors">Talk to Us</a>
           </div>
         </div>
